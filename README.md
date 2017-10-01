@@ -13,4 +13,12 @@ $ php artisan key:generate
 * Setelah itu jalankan perintah berikut
 ``` bash
 $ php artisan migrate
+$ php artisan queue:work
 ```
+* Jalankan aplikasi, dan lakukan registrasi
+* Email verifikasi akun hanya akan dikirimkan jika perintah **php artisan queue:work** dijalankan. Jika tidak, email tidak akan dikirimkan sampai perintah tersebut dijalankan.
+* Alternatifnya gunakan perintah berikut untuk menjalankan perintah tersebut pada _background progress_
+```bash
+$ nohup php artisan queue:work &
+```
+* Alternatif lainnya adalah gunakan [Cron Job](https://github.com/skadevz/laravel-task-scheduling) untuk menjalankan perintah setiap menit
