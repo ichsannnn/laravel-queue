@@ -22,3 +22,4 @@ $ php artisan queue:work
 $ nohup php artisan queue:work &
 ```
 * Alternatif lainnya adalah gunakan [Cron Job](https://github.com/skadevz/laravel-task-scheduling) untuk menjalankan perintah setiap menit
+* Alternatif lain untuk pengguna linux, gunakan [Supervisor](https://laravel.com/docs/5.5/queues#supervisor-configuration).
